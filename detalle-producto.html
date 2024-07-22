@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/tailwind.css">
+    <link rel="stylesheet" href="dist/custom.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <title>Productos</title>
+</head>
+
+<body class="bg-white">
+    <!-- IMAGEN Y DESCRIPCION -->
+
+    <div class="container mx-auto p-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Primera columna: Imágenes del producto -->
+            <div class="grid grid-cols-12 gap-2">
+                <!-- Imagenes Miniaturas -->
+                <div class="col-span-2 hidden md:block">
+                    <div class="flex flex-col space-y-2">
+                        <!-- Columna de miniaturas -->
+                        <button class="focus:border focus:border-gray-700 w-20 h-20">
+                            <img src="src/images/products/product-thumbnail-1.jpg" alt="Miniatura 1"
+                                class="w-full h-full object-cover cursor-pointer"
+                                data-large-src="src/images/products/product-thumbnail-1.jpg">
+                        </button>
+                        <button class="focus:border focus:border-gray-700 w-20 h-20">
+                            <img src="src/images/products/product-thumbnail-2.jpg" alt="Miniatura 2"
+                                class="w-full h-full object-cover cursor-pointer"
+                                data-large-src="src/images/products/product-thumbnail-2.jpg">
+                        </button>
+                        <button class="focus:border focus:border-gray-700 w-20 h-20">
+                            <img src="src/images/products/product-thumbnail-3.jpg" alt="Miniatura 3"
+                                class="w-full h-full object-cover cursor-pointer"
+                                data-large-src="src/images/products/product-thumbnail-3.jpg">
+                        </button>
+                        <button class="focus:border focus:border-gray-700 w-20 h-20">
+                            <img src="src/images/products/product-thumbnail-4.jpg" alt="Miniatura 4"
+                                class="w-full h-full object-cover cursor-pointer"
+                                data-large-src="src/images/products/product-thumbnail-4.jpg">
+                        </button>
+                        <button class="focus:border focus:border-gray-700 w-20 h-20">
+                            <img src="src/images/products/product-thumbnail-5.jpg" alt="Miniatura 5"
+                                class="w-full h-full object-cover cursor-pointer"
+                                data-large-src="src/images/products/product-thumbnail-5.jpg">
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Imagen Principal con Botones de Navegación -->
+                <div class="col-span-12 md:col-span-10 h-[500px] relative">
+                    <!-- Botón para imagen anterior con icono -->
+                    <button id="prevButton" class="absolute left-0 top-1/2 transform -translate-y-1/2 p-2">
+                        <svg class="h-6 w-6 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <!-- Imagen principal -->
+                    <img id="mainImage" src="src/images/products/product-thumbnail-1.jpg" alt="Imagen principal"
+                        class="w-full h-full object-cover">
+                    <!-- Botón para imagen siguiente con icono -->
+                    <button id="nextButton" class="absolute right-0 top-1/2 transform -translate-y-1/2 p-2">
+                        <svg class="h-6 w-6 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                    <!-- Dots para navegación -->
+                    <div id="dotsContainer"
+                        class="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex space-x-2 p-4">
+                        <!-- Los dots se generarán dinámicamente aquí -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Segunda columna: Detalles del producto -->
+            <div class="space-y-4">
+                <!-- Nombre del producto -->
+                <h1 class="text-2xl md:text-4xl font-titulo text-gray-900">212 VIP Rosé Elixir 80ml Eau de Parfum</h1>
+                <!-- Precios -->
+                <div class="text-lg ">
+                    <span class="font-texto text-gray-900 font-semibold">G. 950.626</span>
+                    <span class="font-texto line-through text-gray-500">G. 1.188.282</span>
+                </div>
+                <!-- Descripción -->
+                <p class="font-texto font-light text-gray-900 text-xs md:text-sm">212 VIP Rosé Elixir es una
+                    interpretación sensual
+                    y más
+                    intensa de
+                    nuestro
+                    icónico 212 VIP Rosé, en un frasco rosa brillante con degradado.</p>
+                <!-- Código del producto -->
+                <div class="font-texto font-bold text-black text-sm">
+                    <span>COD:</span> 8411061056752
+                </div>
+                <!-- Código de barras -->
+                <div class="font-texto font-bold text-black text-sm">
+                    <span>COD BARRA:</span> 8411061711767
+                </div>
+                <!-- Tamaños -->
+                <div>
+                    <span class="font-texto font-bold text-gray-900">Tamaños</span>
+                    <div class="flex space-x-2 mt-2">
+                        <button
+                            class=" font-texto px-5 py-4 border rounded text-gray-900 text-xs	hover:border-gray-700">30
+                            ml</button>
+                        <button
+                            class="font-texto px-5 py-4 border rounded text-gray-900 text-xs hover:border-gray-700">50
+                            ml</button>
+                        <button
+                            class=" font-texto px-5 py-4 border rounded text-gray-900 text-xs hover:border-gray-700">80
+                            ml</button>
+                    </div>
+                </div>
+                <!-- Botón agregar al carrito -->
+                <button class="font-texto w-full bg-black text-white py-6 rounded-lg text-sm hover:bg-gray-700">AGREGAR
+                    AL
+                    CARRITO</button>
+                <!-- Compartir -->
+                <div class="font-texto text-center mt-4 ">
+                    <a href="#" class="text-gray-900 flex items-center justify-center space-x-2">
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-4">
+                            <path
+                                d="M13 4.5a2.5 2.5 0 1 1 .702 1.737L6.97 9.604a2.518 2.518 0 0 1 0 .792l6.733 3.367a2.5 2.5 0 1 1-.671 1.341l-6.733-3.367a2.5 2.5 0 1 1 0-3.475l6.733-3.366A2.52 2.52 0 0 1 13 4.5Z" />
+                        </svg>
+                        <span>
+
+                            compartir
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DETALLES PRODUCTO -->
+    <div class="container mx-auto p-4">
+        <!-- Tabs para versión de escritorio -->
+        <div class="hidden md:block">
+            <div class="flex border-b">
+                <button
+                    class="tabbutton text-cuerpo text-xs py-2 px-4 border-b-4 border-gray-700 border-transparent hover:border-gray-300 text-gray-700 font-bold active-tab"
+                    data-tab="tab1">DETALLES DEL PRODUCTO</button>
+                <button
+                    class="tabbutton text-cuerpo text-xs py-2 px-4 border-b-4 border-transparent hover:border-gray-300"
+                    data-tab="tab2">LISTA DE INGREDIENTES</button>
+                <button
+                    class="tabbutton text-cuerpo text-xs py-2 px-4 border-b-4 border-transparent hover:border-gray-300"
+                    data-tab="tab3">SUGERENCIAS</button>
+            </div>
+            <div id="tab1" class="tabcontent py-4">
+                <!-- Contenido del tab 1 -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div class="md:col-span-1">
+
+                        <img src="src/images/products/product-1.jpg" alt="Producto Detalle"
+                            class="w-full h-96 object-contain">
+                    </div>
+                    <div class="md:col-span-3 text-gray-900 space-y-4">
+                        <h2 class="text-sm font-texto font-bold">La fragancia</h2>
+                        <p class="text-xs font-texto">Elixir 212 VIP Rosé es una interpretación sensual y más intensa
+                            de 212 VIP Rosé, en un
+                            frasco
+                            rosa brillante degradé. Una declaración de felicidad, libertad y feminidad, este elixir
+                            eau
+                            de parfum te invita a celebrar la belleza de ser tú mismo con cada pulverización. Esta
+                            fragancia ultrafemenina aporta una fresca intensidad y brillo añadido a nuestro icónico
+                            aroma. Lleva una base floral y de especias con notas de flores de melocotón tan
+                            efervescentes como un vaso de rosé.</p>
+
+                        <p class="text-sm font-texto font-bold ">Para: <span class="font-normal">Ella</span></p>
+                        <p class="text-sm font-texto font-bold">Ella es: <span class="font-normal">Encantadora y
+                                seductora</span></p>
+                        <p class="text-sm font-texto font-bold">Ocasión: <span class="font-normal">Noche</span></p>
+                        <p class="text-sm font-texto font-bold">Familia olfativa: <span class="font-normal">CHYPRE
+                                Floral</span></p>
+                        <p class="text-sm font-texto font-bold">La fragancia: <span class="font-normal">Aditiva y
+                                efervescente</span></p>
+                        <p class="text-sm font-texto font-bold">El frasco: <span class="font-normal">El icónico frasco
+                                de 212 VIP Rosé recibe un glamuroso nuevo giro con brillo rosa degradado, una llamativa
+                                invitación a la autoexpresión con toda libertad.</span></p>
+
+
+                    </div>
+                </div>
+            </div>
+            <div id="tab2" class="tabcontent py-4 hidden">
+                <!-- Contenido del tab 2 -->
+                <div class=" text-gray-900 space-y-4">
+                    <h2 class="text-sm font-texto font-bold">Lista de Ingredientes</h2>
+                    <p class="text-sm font-texto font-normal">Ingredientes del producto detallados aquí.</p>
+                </div>
+            </div>
+            <div id="tab3" class="tabcontent py-4 hidden">
+                <!-- Contenido del tab 3 -->
+                <div class=" text-gray-900 space-y-4">
+                    <h2 class="text-sm font-texto font-bold">Sugerencias</h2>
+                    <p class="text-sm font-texto font-normal">Sugerencias sobre el producto aquí.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Acordeon para versión móvil -->
+        <div class="block md:hidden">
+            <div class="border-t border-b divide-y">
+                <div class="py-4">
+                    <button class="w-full flex justify-between items-center py-2"
+                        onclick="toggleCollapse('mobile-tab1')">
+                        <span class="text-cuerpo text-xs font-medium text-black">DETALLES DEL PRODUCTO</span>
+                        <span id="icon-mobile-tab1"
+                            class="transform rotate-0 transition-transform duration-300">+</span>
+                    </button>
+                    <div id="mobile-tab1" class="transition-all duration-500 ease-in-out overflow-hidden max-h-0">
+                        <div class="py-2">
+                            <div class="grid grid-cols-1 gap-4">
+                                <img src="src/images/products/product-1.jpg" alt="Producto Detalle"
+                                    class="w-full h-60 object-contain">
+                                <div class=" text-gray-900 space-y-4">
+                                    <h2 class="text-sm font-texto font-bold">La fragancia</h2>
+                                    <p class="text-xs font-texto">Elixir 212 VIP Rosé es una interpretación sensual y
+                                        más intensa
+                                        de 212 VIP Rosé, en un
+                                        frasco
+                                        rosa brillante degradé. Una declaración de felicidad, libertad y feminidad, este
+                                        elixir
+                                        eau
+                                        de parfum te invita a celebrar la belleza de ser tú mismo con cada
+                                        pulverización. Esta
+                                        fragancia ultrafemenina aporta una fresca intensidad y brillo añadido a nuestro
+                                        icónico
+                                        aroma. Lleva una base floral y de especias con notas de flores de melocotón tan
+                                        efervescentes como un vaso de rosé.</p>
+
+                                    <p class="text-sm font-texto font-bold ">Para: <span class="font-normal">Ella</span>
+                                    </p>
+                                    <p class="text-sm font-texto font-bold">Ella es: <span
+                                            class="font-normal">Encantadora y
+                                            seductora</span></p>
+                                    <p class="text-sm font-texto font-bold">Ocasión: <span
+                                            class="font-normal">Noche</span></p>
+                                    <p class="text-sm font-texto font-bold">Familia olfativa: <span
+                                            class="font-normal">CHYPRE
+                                            Floral</span></p>
+                                    <p class="text-sm font-texto font-bold">La fragancia: <span
+                                            class="font-normal">Aditiva y
+                                            efervescente</span></p>
+                                    <p class="text-sm font-texto font-bold">El frasco: <span class="font-normal">El
+                                            icónico frasco
+                                            de 212 VIP Rosé recibe un glamuroso nuevo giro con brillo rosa degradado,
+                                            una llamativa
+                                            invitación a la autoexpresión con toda libertad.</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-4">
+                    <button class="w-full flex justify-between items-center py-2"
+                        onclick="toggleCollapse('mobile-tab2')">
+                        <span class="text-cuerpo text-xs font-medium text-black">LISTA DE INGREDIENTES</span>
+                        <span id="icon-mobile-tab2"
+                            class="transform rotate-0 transition-transform duration-300">+</span>
+                    </button>
+                    <div id="mobile-tab2" class="transition-all duration-500 ease-in-out overflow-hidden max-h-0">
+                        <div class="py-2">
+                            <div class=" text-gray-900 space-y-4">
+                                <h2 class="text-sm font-texto font-bold">Lista de Ingredientes</h2>
+                                <p class="text-sm font-texto font-normal">Ingredientes del producto detallados aquí.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-4">
+                    <button class="w-full flex justify-between items-center py-2"
+                        onclick="toggleCollapse('mobile-tab3')">
+                        <span class="text-cuerpo text-xs font-medium text-black">SUGERENCIAS</span>
+                        <span id="icon-mobile-tab3"
+                            class="transform rotate-0 transition-transform duration-300">+</span>
+                    </button>
+                    <div id="mobile-tab3" class="transition-all duration-500 ease-in-out overflow-hidden max-h-0">
+                        <div class="py-2">
+                            <div class=" text-gray-900 space-y-4">
+                                <h2 class="text-sm font-texto font-bold">Sugerencias</h2>
+                                <p class="text-sm font-texto font-normal">Sugerencias sobre el producto aquí.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- RECOMENDACIONES DE PRODUCTOS SIMILARES-->
+
+    <div class="container mx-auto p-4">
+        <h2 class="text-2xl md:text-4xl font-titulo my-8 text-gray-900 text-center">Quizás te guste también</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+            <!-- SUGERENCIA I -->
+            <div class="text-center space-y-2 ">
+                <img src="src/images/destacado-1.jpg" alt="Producto 1" class="w-full object-cover h-80">
+                <div class="px-4 space-y-2 pt-5">
+
+                    <p class="font-titulo text-sm text-black">212 VIP Rosé Elixir 80ml Eau de Parfum</p>
+                    <p class="font-texto text-xs">3 Tamaños</p>
+                    <p class="font-texto text-xs">Desde 81,20 €</p>
+                </div>
+            </div>
+            <!-- SUGERENCIA II -->
+            <div class="text-center space-y-2">
+                <img src="src/images/destacado-1.jpg" alt="Producto 2" class="w-full h-80 object-cover">
+                <div class="px-4 space-y-2 pt-5">
+                    <p class="font-titulo text-sm text-black">Elixir 212 VIP Rosé 80 ml Eau de Parfum y Loción
+                        Corporal
+                        100
+                        ml</p>
+                    <p class="font-texto text-xs">1 Tamaño</p>
+                    <p class="font-texto text-xs">134,00 €</p>
+                </div>
+            </div>
+            <!-- SUGERENCIA III -->
+            <div class="text-center space-y-2">
+                <img src="src/images/destacado-1.jpg" alt="Producto 3" class="w-full  h-80 object-cover">
+                <div class="px-4 space-y-2 pt-5">
+                    <p class="font-titulo text-sm text-black">CH Birds of Paradise 100ml Eau de Parfum</p>
+                    <p class="font-texto text-xs">1 Tamaño</p>
+                    <p class="font-texto text-xs">138,00 €</p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!-- SCRIPT -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Selecciona todas las miniaturas y la imagen principal
+            const thumbnails = document.querySelectorAll('.cursor-pointer');
+            const mainImage = document.getElementById('mainImage');
+            let currentIndex = 0;
+
+            // Crea un array con las URLs de las imágenes grandes
+            const images = Array.from(thumbnails).map(thumb => thumb.getAttribute('data-large-src'));
+
+            // Contenedor de los dots
+            const dotsContainer = document.getElementById('dotsContainer');
+
+            // Crea y añade los dots al contenedor
+            images.forEach((image, index) => {
+                const dot = document.createElement('div');
+                dot.classList.add('h-2', 'w-2', 'bg-gray-500', 'rounded-full', 'cursor-pointer');
+                if (index === 0) dot.classList.add('bg-gray-900'); // Primer dot activo
+                dot.addEventListener('click', () => {
+                    mainImage.src = image;
+                    currentIndex = index;
+                    updateDots();
+                });
+                dotsContainer.appendChild(dot);
+            });
+
+            // Actualiza la clase de los dots para mostrar cuál está activo
+            function updateDots() {
+                // Utiliza children en lugar de childNodes para obtener solo los elementos hijos
+                Array.from(dotsContainer.children).forEach((dot, index) => {
+                    dot.classList.remove('bg-gray-900');
+                    if (index === currentIndex) dot.classList.add('bg-gray-900');
+                });
+            }
+
+
+            // Agrega un evento a cada miniatura para actualizar la imagen principal al hacer clic
+            thumbnails.forEach((thumbnail, index) => {
+                thumbnail.addEventListener('click', () => {
+                    mainImage.src = thumbnail.getAttribute('data-large-src');
+                    currentIndex = index;  // Actualiza el índice actual
+                    updateDots();  // Actualiza los dots
+                });
+            });
+
+            // Función para mostrar la imagen anterior
+            document.getElementById('prevButton').addEventListener('click', () => {
+                currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+                mainImage.src = images[currentIndex];
+                updateDots();  // Actualiza los dots
+            });
+
+            // Función para mostrar la imagen siguiente
+            document.getElementById('nextButton').addEventListener('click', () => {
+                currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+                mainImage.src = images[currentIndex];
+                updateDots();  // Actualiza los dots
+            });
+        });
+    </script>
+
+    <script>
+        // Funcionalidad para los tabs en versión escritorio
+        document.querySelectorAll('.tabbutton').forEach(tab => {
+            tab.addEventListener('click', function () {
+                document.querySelectorAll('.tabcontent').forEach(content => content.classList.add('hidden'));
+                document.querySelectorAll('.tabbutton').forEach(btn => {
+                    btn.classList.remove('border-gray-700');
+                    btn.classList.remove('text-gray-700');
+                    btn.classList.add('text-gray-500');
+                    btn.classList.remove('font-bold');
+
+                });
+                this.classList.add('border-gray-700');
+                this.classList.add('font-bold');
+                this.classList.add('text-gray-700');
+                this.classList.remove('text-gray-500');
+                document.getElementById(this.getAttribute('data-tab')).classList.remove('hidden');
+            });
+        });
+
+        // Inicializar el primer tab como activo
+        document.querySelector('.tabbutton').classList.add('border-gray-700');
+
+        // Funcionalidad para los collapsibles en versión móvil
+        function toggleCollapse(id) {
+            const content = document.getElementById(id);
+            const icon = document.getElementById(`icon-${id}`);
+            if (content.classList.contains('max-h-0')) {
+                content.classList.remove('max-h-0');
+                content.classList.add('max-h-screen');
+                icon.classList.add('rotate-180');
+                icon.textContent = '-';
+            } else {
+                content.classList.add('max-h-0');
+                content.classList.remove('max-h-screen');
+                icon.classList.remove('rotate-180');
+                icon.textContent = '+';
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

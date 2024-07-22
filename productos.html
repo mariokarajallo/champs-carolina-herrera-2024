@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/tailwind.css">
+    <link rel="stylesheet" href="dist/custom.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <title>Productos</title>
+
+</head>
+
+<body class="bg-white">
+
+    <!-- BANNER PRINCIPAL -->
+    <div class="w-full mb-8">
+        <div class="relative h-64 lg:h-[350px] bg-red-500">
+            <img src="src/images/banner-1.avif" alt="Banner Image 1"
+                class="absolute inset-0 w-full h-full object-cover object-center">
+        </div>
+    </div>
+    <!-- TITULO Y CATEGORIAS -->
+
+    <section class="my-20 px-2 space-y-4">
+        <div class="container mx-auto text-center flex flex-col space-y-4">
+            <h1 class=" text-2xl md:text-4xl font-titulo text-center text-black">Perfumes de lujo para mujer</h1>
+
+            <p class="font-texto text-xs md:text-sm">
+                Presentamos la nueva colección de fragancias Luckycharms: seis alegres aromas florales inspirados en el
+                mundo de la suerte y la fortuna. Cada frasco de dos tonos de colores viene con su propio amuleto de la
+                suerte; puedes combinarlo con tu look, tu estado de ánimo o incluso tu maquillaje.
+
+            </p>
+
+        </div>
+        <!-- CARDS PRODUCTOS MUJER Y HOMBRE-->
+        <div class="overflow-x-auto">
+            <div class="flex md:justify-center space-x-1 lg:space-x-10 h-36">
+                <!-- ITEM CATEGORIA TODOS  -->
+                <a href="#" class="text-center">
+                    <div
+                        class="w-36 h-20 bg-gray-100 rounded-xl hover:bg-gray-200 hover:border border-gray-300 flex justify-center items-center">
+                        <span class="block mt-2 font-texto text-md px-4">TODOS </span>
+                    </div>
+                </a>
+
+                <!-- ITEM CATEGORIA  -->
+                <a href="#" class="text-center">
+                    <div class="w-36 h-20 bg-gray-100 rounded-xl hover:bg-gray-200 hover:border border-gray-300">
+                        <img src="src/images/categories/categorie-fem-1.png" alt=""
+                            class="w-full h-full object-contain">
+                        <span class="block mt-2 font-texto text-xs px-4">GOOD GIRL</span>
+                    </div>
+                </a>
+
+                <!-- ITEM CATEGORIA  -->
+                <a href="#" class="text-center">
+                    <div class="w-36 h-20 bg-gray-100 rounded-xl hover:bg-gray-200 hover:border border-gray-300">
+                        <img src="src/images/categories/categorie-fem-2.png" alt=""
+                            class="w-full h-full object-contain">
+                        <span class="block mt-2 font-texto text-xs px-4">FRAGANCIAS DE MUJER CH</span>
+                    </div>
+                </a>
+
+                <!-- ITEM CATEGORIA  -->
+                <a href="#" class="text-center">
+                    <div class="w-36 h-20 bg-gray-100 rounded-xl hover:bg-gray-200 hover:border border-gray-300">
+                        <img src="src/images/categories/categorie-fem-3.png" alt=""
+                            class="w-full h-full object-contain">
+                        <span class="block mt-2 font-texto text-xs px-4">COLECCIÓN DE FRAGANCIAS 212</span>
+                    </div>
+                </a>
+
+                <!-- ITEM CATEGORIA  -->
+                <a href="#" class="text-center">
+                    <div class="w-36 h-20 bg-gray-100 rounded-xl hover:bg-gray-200 hover:border border-gray-300">
+                        <img src="src/images/categories/categorie-fem-4.png" alt=""
+                            class="w-full h-full object-contain">
+                        <span class="block mt-2 font-texto text-xs px-4">LA CONFIDENTIAL COLLECTION</span>
+                    </div>
+
+                </a>
+
+                <!-- ITEM CATEGORIA  -->
+                <a href="#" class="text-center">
+                    <div class="w-36 h-20 bg-gray-100 rounded-xl hover:bg-gray-200 hover:border border-gray-300">
+                        <img src="src/images/categories/categorie-fem-5.png" alt=""
+                            class="w-full h-full object-contain">
+                        <span class="block mt-2 font-texto text-xs px-4">CUIDADO DEL CUERPO</span>
+                    </div>
+                </a>
+
+                <!-- ITEM CATEGORIA  -->
+                <a href="#" class="text-center">
+                    <div class="w-36 h-20 bg-gray-100 rounded-xl hover:bg-gray-200 hover:border border-gray-300">
+                        <img src="src/images/categories/categorie-fem-6.png" alt=""
+                            class="w-full h-full object-contain">
+                        <span class="block mt-2 font-texto text-xs px-4">COLECCIÓN LUCKYCHARMS</span>
+                    </div>
+                </a>
+
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ORDENAR Y GRILLA DE PRODUCTOS -->
+    <div class="container mx-auto">
+        <!-- SELECTOR ORDENAR PRODCUTO -->
+        <div class="flex justify-end px-2">
+            <div class="flex space-x-2">
+                <label for="sort" class="text-black font-medium">Ordenar:</label>
+                <select id="sort" class="block w-full mt-1 bg-white transition duration-300 ease-in-out transform">
+                    <option>Novedades</option>
+                    <option>Precio: Alto - Bajo</option>
+                    <option>Precio: Bajo - Alto</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- GRILLA DE PRODUCTO -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8 px-2 justify-items-center">
+            <!-- ITEM PRODUCTO -->
+            <a href="#" class="relative space-y-2 block lg:w-72">
+                <!-- CONTENEDOR DE IMAGEN -->
+                <div class="relative lg:w-72 h-52 md:h-72 overflow-hidden group">
+                    <!-- PRIMERA IMAGEN -->
+                    <img src="src/images/products/product-1.jpg" alt="Producto 1"
+                        class="w-full h-full object-cover transition duration-700 ease-in-out group-hover:opacity-0">
+                    <!-- SEGUNDA IMAGEN -->
+                    <img src="src/images/products/product-1-2.jpg" alt="Producto 1 Hover"
+                        class="absolute inset-0 w-full h-full object-cover transition duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+                </div>
+                <!-- NOMBRE & PRECIO -->
+                <div class="px-4 text-center space-y-2">
+                    <p class="font-titulo text-xs md:text-sm text-black">212 VIP Rosé Elixir 80ml Eau de Parfum</p>
+                    <p class="font-texto text-xs text-gray-500">3 Tamaños</p>
+                    <p class="font-texto text-xs text-gray-500">Desde 81,20 €</p>
+                </div>
+            </a>
+
+            <!-- ITEM PRODUCTO -->
+            <a href="#" class="relative space-y-2 block lg:w-72">
+                <!-- CONTENEDOR DE IMAGEN -->
+                <div class="relative overflow-hidden group lg:w-72 h-52 md:h-72">
+                    <!-- PRIMERA IMAGEN -->
+                    <img src="src/images/products/product-1.jpg" alt="Producto 1"
+                        class="w-full h-full object-cover transition duration-700 ease-in-out group-hover:opacity-0">
+                    <!-- SEGUNDA IMAGEN -->
+                    <img src="src/images/products/product-1-2.jpg" alt="Producto 1 Hover"
+                        class="absolute inset-0 w-full h-full object-cover transition duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+                </div>
+                <!-- NOMBRE & PRECIO -->
+                <div class="px-4 text-center space-y-2">
+                    <p class="font-titulo text-xs md:text-sm text-black">212 VIP Rosé Elixir 80ml Eau de Parfum</p>
+                    <p class="font-texto text-xs text-gray-500">3 Tamaños</p>
+                    <p class="font-texto text-xs text-gray-500">Desde 81,20 €</p>
+                </div>
+            </a>
+
+            <!-- ITEM PRODUCTO -->
+            <a href="#" class="relative space-y-2 block lg:w-72">
+                <!-- CONTENEDOR DE IMAGEN -->
+                <div class="relative lg:w-72 h-52 md:h-72 overflow-hidden group">
+                    <!-- PRIMERA IMAGEN -->
+                    <img src="src/images/products/product-1.jpg" alt="Producto 1"
+                        class="w-full h-full object-cover transition duration-700 ease-in-out group-hover:opacity-0">
+                    <!-- SEGUNDA IMAGEN -->
+                    <img src="src/images/products/product-1-2.jpg" alt="Producto 1 Hover"
+                        class="absolute inset-0 w-full h-full object-cover transition duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+                </div>
+                <!-- NOMBRE & PRECIO -->
+                <div class="px-4 text-center space-y-2">
+                    <p class="font-titulo text-xs md:text-sm text-black">212 VIP Rosé Elixir 80ml Eau de Parfum</p>
+                    <p class="font-texto text-xs text-gray-500">3 Tamaños</p>
+                    <p class="font-texto text-xs text-gray-500">Desde 81,20 €</p>
+                </div>
+            </a>
+
+            <!-- ITEM PRODUCTO -->
+            <a href="#" class="relative space-y-2 block lg:w-72">
+                <!-- CONTENEDOR DE IMAGEN -->
+                <div class="relative overflow-hidden group lg:w-72 h-52 md:h-72">
+                    <!-- PRIMERA IMAGEN -->
+                    <img src="src/images/products/product-1.jpg" alt="Producto 1"
+                        class="w-full h-full object-cover transition duration-700 ease-in-out group-hover:opacity-0">
+                    <!-- SEGUNDA IMAGEN -->
+                    <img src="src/images/products/product-1-2.jpg" alt="Producto 1 Hover"
+                        class="absolute inset-0 w-full h-full object-cover transition duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+                </div>
+                <!-- NOMBRE & PRECIO -->
+                <div class="px-4 text-center space-y-2">
+                    <p class="font-titulo text-xs md:text-sm text-black">212 VIP Rosé Elixir 80ml Eau de Parfum</p>
+                    <p class="font-texto text-xs text-gray-500">3 Tamaños</p>
+                    <p class="font-texto text-xs text-gray-500">Desde 81,20 €</p>
+                </div>
+            </a>
+
+
+
+
+
+
+
+        </div>
+
+
+    </div>
+
+    <!-- BANNER DESCUBRIR AHORA -->
+    <div class="relative w-full h-64 lg:h-[350px] mt-20">
+        <img src="src/images/banner-descubrir-ahora.avif" alt="Descubrir Ahora"
+            class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end items-center p-8">
+            <span class="font-texto text-white mb-4">Explora tu fragancia Carolina Herrera</span>
+            <a href="#" class="px-6 py-3 bg-white text-black font-texto rounded-lg text-sm hover:bg-gray-300">DESCUBRIR
+                AHORA</a>
+        </div>
+    </div>
+
+</body>
+
+</html>
